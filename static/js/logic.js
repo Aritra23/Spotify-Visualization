@@ -12,7 +12,7 @@ var myMap = L.map("map", {
     accessToken: API_KEY
   }).addTo(myMap);
   
-var file = "../spotify_data_lat_long.csv";
+var file = "../spotify_data_lat_long_separated.csv";
 
 d3.csv(file, function(response, layer) {
 

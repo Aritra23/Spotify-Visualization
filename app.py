@@ -9,8 +9,11 @@ conn = "mongodb://localhost:27017"
 client = pymongo.MongoClient(conn)
 
 # connect to mongo db and collection
+# db = client.spotify_db
+# collection = db.spotify_data
+
 db = client.spotify_db
-collection = db.spotify_data
+collection = db.spotify_data_lat_long
 
 
 @app.route("/")
