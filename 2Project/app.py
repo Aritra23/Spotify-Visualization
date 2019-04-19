@@ -9,8 +9,24 @@ def hello_world():
 
 @app.route('/get_data')
 def get_data():
-    data = pd.read_csv("static/data/spotify_data_lat_long_separated.csv")
+    data = pd.read_csv("static/data/Most_popular_songs_per_region.csv")
     return(data.to_csv())
+
+@app.route('/get_selected_data')
+def get_selected_data():
+    data = pd.read_csv("static/data/spotify_data_lat_long_separated.csv")
+    return(data.to_csv()) 
+@app.route('/table')
+def table_data():
+    return render_template('tables.html')
+
+@app.route('/tech')
+def tech_data():
+    return render_template('Tech.html')
+
+@app.route('/maps')
+def map_plots():
+    return render_template('Maps.html')
 
 if __name__ == "__main__":
     app.run()

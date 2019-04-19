@@ -34,7 +34,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Spotify Visualization</a>
+    <a class="navbar-brand mr-1" href="/">Spotify Visualization</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -52,9 +52,9 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#page-top">
+        <a class="nav-link" href="/maps">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Maps</span>
+          <span>Maps</span>      
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -63,12 +63,12 @@
           <span>Pages</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="#Tech">Technologies</a>
+          <a class="dropdown-item" href="/tech">Technologies</a>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="./tables.html">
+        <a class="nav-link" href="/table">
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>
@@ -92,12 +92,14 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-chart-area"></i>
-            2017-2018 Spotify Streams</div>
+            2017-2018 Most popular streams per region</div>
           <div class="card-body">
               <div id="world-map" style="width: 1150px; height: 600px"></div>
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
+
+        
 
         <!-- <div id="world-map" style="width: 600px; height: 400px"></div> -->
   <!-- <script>
@@ -3423,9 +3425,9 @@
   <!-- <script src="bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script> -->
 
   <!-- Page level plugin JavaScript-->
-  <!-- <script src="bootstrap/vendor/chart.js/Chart.min.js"></script> -->
-  <!-- <script src="bootstrap/vendor/datatables/jquery.dataTables.js"></script> -->
-  <!-- <script src="bootstrap/vendor/datatables/dataTables.bootstrap4.js"></script> -->
+  <!-- <script src="bootstrap/vendor/chart.js/Chart.min.js"></script> 
+  <script src="bootstrap/vendor/datatables/jquery.dataTables.js"></script>
+   <script src="bootstrap/vendor/datatables/dataTables.bootstrap4.js"></script> -->
 
   <!-- Custom scripts for all pages-->
   <script src="../static/bootstrap/js/sb-admin.min.js"></script>
