@@ -16,6 +16,7 @@ def get_data():
 def get_selected_data():
     data = pd.read_csv("static/data/spotify_data_lat_long_separated.csv")
     return(data.to_csv()) 
+
 @app.route('/table')
 def table_data():
     return render_template('tables.html')

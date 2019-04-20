@@ -25,6 +25,8 @@ d3.csv('/get_data').then(function (data) {
     backgroundColor: '#000000', // #383f47
     markers: mapMarkers,
   });
+
+  
 });
 
 
@@ -65,7 +67,7 @@ d3.csv('/get_selected_data').then(function (data) {
       var cell = tbody.append("td");
       cell.text(value);
     });
-  });
     
-});
+  });
 
+});
