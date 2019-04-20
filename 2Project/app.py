@@ -14,7 +14,7 @@ def get_data():
 
 @app.route('/get_selected_data')
 def get_selected_data():
-    data = pd.read_csv("static/data/spotify_data_lat_long_separated.csv")
+    data = pd.read_csv("static/data/Most_popular_artist_per_region.csv")
     return(data.to_csv()) 
 
 @app.route('/table')

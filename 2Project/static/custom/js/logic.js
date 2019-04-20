@@ -5,7 +5,7 @@ d3.csv('/get_data').then(function (data) {
   data.forEach(function (d) {
     mapMarkers.push({
       latLng: [d.lat, d.long],
-      name: [d.Artist, d["Track Name"], d.Streams]
+      name: [d["Track Name"], d.Streams]
     });
   });
 
@@ -36,7 +36,7 @@ d3.csv('/get_selected_data').then(function (data) {
   data.forEach(function (d) {
     mapMarkers.push({
       latLng: [d.lat, d.long],
-      name: [d.Artist, d.Streams]
+      name: [d.Artist, d["Track Name"], d.Position]
     });
   });
 
