@@ -97,9 +97,105 @@ layout = {
     //"autorange": False, 
     "domain": [-0.01, 1], 
     "range": [0, 6.66421250763], 
-    "title": "<b>% Song streamed in Region</b>", 
+    "title": "<b>% Song streamed each Region</b>", 
     "type": "linear"
   }
 };
 Plotly.newPlot(plot, data,layout);
 
+
+
+
+trace10 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [5.93, 0, 9.8, 0, 4.73, 7.17], 
+  "name": "Ed Sheeran", 
+  "type": "bar",
+}
+trace11 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [2.87, 0, 1.99, 0, 4.70, 4.58], 
+  "name": "The Chainsmokers", 
+  "type": "bar", 
+}
+trace12 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [2.91, 4.74, 3.96, 0, 0, 0], 
+  "name": "Drake", 
+  "type": "bar", 
+}
+trace13 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [0, 0, 0, 4.36, 0, 0], 
+  "name": "J Balvin", 
+  "type": "bar", 
+}
+trace14 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [0, 0, 0, 3.51, 0, 0], 
+  "name": "Maluma", 
+  "type": "bar", 
+}
+trace15 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [0, 0, 0, 3.02, 0, 0], 
+  "name": "Ozuna", 
+  "type": "bar", 
+}
+trace16 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [0, 4.41, 0, 0, 0, 0], 
+  "name": "Kendrick Lamar", 
+  "type": "bar", 
+}
+trace17 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [0, 3.74, 0, 0, 0, 0], 
+  "name": "Post Malone", 
+  "type": "bar", 
+}
+
+trace18 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [0, 0, 0, 0, 0, 2.31], 
+  "name": "Charlie Puth", 
+  "type": "bar", 
+}
+
+trace19 = {
+  "x": ["Global", "USA", "Great Britain", "Mexico", "Taiwan", "Singapore"], 
+  "y": [0, 0, 0, 0, 1.99, 0], 
+  "name": "Martin Garrix", 
+  "type": "bar", 
+}
+
+
+seconddata = [trace10, trace11, trace12, trace13, trace14, trace15, trace16, trace17, trace18, trace19]
+secondlayout = {
+  "barmode": "stack", 
+  "font": {"size": 18}, 
+  "hovermode": "closest", 
+  "legend": {
+    "x": 1.01935845381, 
+    "y": 0.673239347844, 
+    "borderwidth": 0, 
+    "orientation": "v", 
+    "traceorder": "normal"
+  }, 
+  "title": "<b>Top 3 Streamed Artists on Spotify during 2017-2018 by Country</b>", 
+  "titlefont": {"size": 28}, 
+  "xaxis": {
+    //"autorange": True, 
+    "range": [-0.5, 5.5], 
+    "title": "<b>Country</b>", 
+    "type": "category"
+  }, 
+  "yaxis": {
+   // "autorange": True, 
+    "range": [0, 22.7263157895], 
+    "title": "<b>Artist Stream % each Region</b>", 
+    "type": "linear"
+  }
+}
+
+Plotly.newPlot(secondplot, seconddata,secondlayout);
