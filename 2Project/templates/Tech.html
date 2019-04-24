@@ -9,16 +9,24 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Spotify Visulizations</title>
+  <title>Spotify Visualization</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../static/bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="../static/bootstrap/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="../static/bootstrap/css/sb-admin.css" rel="stylesheet">
+
+  <!-- Non-Bootstrap Scripts -->
+  <link rel="stylesheet" href="../static/custom/css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+  <script src="../static/custom/js/jquery-3.3.0.min.js"></script>
+  <script src="../static/custom/js/jquery-jvectormap-2.0.3.min.js"></script>
+  <script src="../static/custom/js/jquery-jvectormap-world-mill.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="../static/custom/js/logic.js"></script>
 
 </head>
 
@@ -26,63 +34,65 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Techonologies</a>
+    <a class="navbar-brand mr-1" href="/">Spotify Visualization</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
     </button>
 
 
-
     <!-- Navbar -->       
-  </li>
-</ul>
+      </li>
+    </ul>
 
-</nav>
+  </nav>
 
-<div id="wrapper">
+  <div id="wrapper">
 
-<!-- Sidebar -->
-<ul class="sidebar navbar-nav">
-  <li class="nav-item active">
-    <a class="nav-link" href="index.html">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Maps</span>
-    </a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-fw fa-folder"></i>
-      <span>Pages</span>
-    </a>
-    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-      <a class="dropdown-item" href="Tech.html">Technologies</a>
-    </div>
-  </li>
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/maps">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Maps</span>      
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Pages</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="/tech">Technologies</a>
+        </div>
+      </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="tables.html">
-      <i class="fas fa-fw fa-table"></i>
-      <span>Tables</span></a>
-  </li>
-</ul>
+      <li class="nav-item">
+        <a class="nav-link" href="/table">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span></a>
+      </li>
+    </ul>
 
-<div id="content-wrapper">
+    <div id="content-wrapper">
 
-  <div class="container-fluid">
+      <div class="container-fluid">
 
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.html">Dashboard</a>
+            <a href="#">Tools and Techniques</a>
           </li>
-          
+          <li class="breadcrumb-item active">Overview</li>
         </ol>
-
         <!-- Page Content -->
-        <h1>Techonologies used to Anaylze and Visulaize Spotify Data</h1>
+        <h1>Techonologies used to Anaylze and Visualize Spotify Data</h1>
         <hr>
-        <p>Put paragraph here</p>
+        <p>For the data extraction we used Spotify daily ranking song playlist dataset from Kaggle. The data transformation and munging was performed used Pandas and Matplotlib. The Latitude and Longitude are derived from the Google Maps API and then merged with the transformed dataframes.  </p>
+
+        <p>The dataframes were converted to csv and imported in Mongo as UTF-8 encoded format. The routes for each pages is created using the app.py and Flask App was used for rendering the data and binding with the template.</p>
+
+        <p>For the visualization we used JVectorMaps Plugin library for drawing the World Maps. It is scripted in Native browser technologies like Javascript, CSS, HTML, SVG and Jquery and works across all modern browsers and can be rendered in mobile as well as desktop version. The other interactive maps were created using Plotly.JS.</p>
 
       </div>
       <!-- /.container-fluid -->
